@@ -4,5 +4,6 @@ import com.example.estake.common.models.PropertyModel
 import com.example.estake.common.utilities.UiState
 
 interface SearchRepository {
-    suspend fun searchProperties(query: String): UiState<List<PropertyModel>>
+    // ⚡ Change: Accept separate filters for accuracy
+    suspend fun searchProperties(country: String, city: String): UiState<List<PropertyModel>>
 }

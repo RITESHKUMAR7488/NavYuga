@@ -16,36 +16,26 @@ class SearchViewModel @Inject constructor(
     private val repository: SearchRepository
 ) : ViewModel() {
 
-    // Search Results State
     private val _searchState = MutableStateFlow<UiState<List<PropertyModel>>>(UiState.Idle)
     val searchState: StateFlow<UiState<List<PropertyModel>>> = _searchState
 
-    // Filter States
-    val selectedCountry = MutableStateFlow("India")
-    val selectedCity = MutableStateFlow("")
-    val selectedCurrency = MutableStateFlow("INR")
+    // Selection States
+    var selectedCountry: String = ""
+    var selectedCity: String = ""
+    var selectedCurrency: String = ""
 
-    // Recent History State
-    private val _recentHistory = MutableStateFlow<List<String>>(emptyList())
-    val recentHistory: StateFlow<List<String>> = _recentHistory
-
-    init {
-        // Dummy History Data
-        _recentHistory.value = listOf("Kolkata - Reliance", "Mumbai - HDFC", "Bangalore - Tanishq")
+    fun updateSelection(country: String, city: String, currency: String) {
+        selectedCountry = country
+        selectedCity = city
+        selectedCurrency = currency
     }
 
     fun performSearch() {
-        val query = "${selectedCity.value} ${selectedCountry.value}"
         viewModelScope.launch {
             _searchState.value = UiState.Loading
-            // Use the repository to filter based on the selected city/country
-            _searchState.value = repository.searchProperties(query.trim())
-        }
-    }
 
-    fun updateSelection(country: String, city: String, currency: String) {
-        selectedCountry.value = country
-        selectedCity.value = city
-        selectedCurrency.value = currency
+            // ⚡ Pass separated values for accurate filtering
+            _searchState.value = repository.searchProperties(selectedCountry, selectedCity)
+        }
     }
 }
