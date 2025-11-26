@@ -10,6 +10,7 @@ import com.example.estake.authModule.uis.SignInActivity
 import com.example.estake.common.utilities.PreferenceManager
 import com.example.estake.databinding.ActivityMainBinding
 import com.example.estake.mainModule.uis.*
+import com.example.estake.searchModule.uis.SearchFragment
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
