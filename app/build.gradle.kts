@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.estake"
+    namespace = "com.example.navyuga"
     compileSdk = 36
 
     defaultConfig {
