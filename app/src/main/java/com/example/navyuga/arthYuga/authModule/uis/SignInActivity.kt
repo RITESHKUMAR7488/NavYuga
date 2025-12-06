@@ -66,15 +66,9 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun observeState() {
-        // ⚡ Collect the StateFlow (The Coroutines way to listen for updates)
         lifecycleScope.launch {
             viewModel.loginState.collect { state ->
                 when (state) {
-                    is UiState.Idle -> {
-                        // Do nothing or reset button
-                        binding.btnLogin.text = "Secure Login"
-                        binding.btnLogin.isEnabled = true
-                    }
                     is UiState.Loading -> {
                         binding.btnLogin.text = "Verifying..."
                         binding.btnLogin.isEnabled = false
@@ -83,8 +77,15 @@ class SignInActivity : AppCompatActivity() {
                         binding.btnLogin.text = "Success"
                         preferenceManager.putBoolean(PreferenceManager.KEY_IS_LOGGED_IN, true)
 
-                        // Navigate to Main App
-                        startActivity(Intent(this@SignInActivity, MainActivity::class.java))
+                        // ⚡ CHECK ROLE
+                        val user = state.data
+                        if (user.role == "admin") {
+                            // Go to Admin Dashboard
+                            startActivity(Intent(this@SignInActivity, com.example.navyuga.arthYuga.adminModule.uis.AdminDashboardActivity::class.java))
+                        } else {
+                            // Go to User App
+                            startActivity(Intent(this@SignInActivity, com.example.navyuga.MainActivity::class.java))
+                        }
                         finish()
                     }
                     is UiState.Failure -> {
@@ -92,6 +93,7 @@ class SignInActivity : AppCompatActivity() {
                         binding.btnLogin.isEnabled = true
                         Toast.makeText(this@SignInActivity, state.error, Toast.LENGTH_LONG).show()
                     }
+                    else -> {}
                 }
             }
         }

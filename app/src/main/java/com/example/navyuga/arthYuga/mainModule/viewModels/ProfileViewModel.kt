@@ -3,8 +3,8 @@ package com.example.navyuga.arthYuga.mainModule.viewModels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.navyuga.arthYuga.common.utilities.UiState
-import com.example.navyuga.mainModule.adapters.PortfolioStat
-import com.example.navyuga.mainModule.repositories.ProfileRepository
+import com.example.navyuga.arthYuga.mainModule.adapters.PortfolioStat
+import com.example.navyuga.arthYuga.mainModule.repositories.ProfileRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

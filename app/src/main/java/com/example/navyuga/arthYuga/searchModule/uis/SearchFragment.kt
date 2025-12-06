@@ -14,8 +14,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.navyuga.arthYuga.common.utilities.UiState
 import com.example.navyuga.databinding.FragmentSearchBinding
-import com.example.navyuga.mainModule.adapters.PropertyAdapter
-import com.example.navyuga.mainModule.uis.PropertyDetailActivity
+import com.example.navyuga.arthYuga.mainModule.adapters.PropertyAdapter
+import com.example.navyuga.arthYuga.mainModule.uis.PropertyDetailActivity
 import com.example.navyuga.arthYuga.searchModule.viewModels.SearchViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch

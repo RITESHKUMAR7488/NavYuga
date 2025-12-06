@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.navyuga.R
 import com.example.navyuga.arthYuga.common.models.PropertyModel
 import com.example.navyuga.databinding.FragmentHomeBinding
-import com.example.navyuga.mainModule.adapters.PropertyAdapter
-import com.example.navyuga.mainModule.adapters.StoryAdapter
-import com.example.navyuga.mainModule.adapters.StoryModel
+import com.example.navyuga.arthYuga.mainModule.adapters.PropertyAdapter
+import com.example.navyuga.arthYuga.mainModule.adapters.StoryAdapter
+import com.example.navyuga.arthYuga.mainModule.adapters.StoryModel
 import dagger.hilt.android.AndroidEntryPoint
 import android.content.Intent
 

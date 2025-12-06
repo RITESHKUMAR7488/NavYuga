@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name=".EstakeApplication"
+        android:name=".NavyugaApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,14 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EStake">
         <activity
-            android:name=".mainModule.uis.PropertyDetailActivity"
+            android:name=".arthYuga.adminModule.uis.AddUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".arthYuga.adminModule.uis.AdminDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".arthYuga.mainModule.uis.PropertyDetailActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-        <activity android:name=".authModule.uis.RegisterActivity" />
+        <activity android:name=".arthYuga.authModule.uis.RegisterActivity" />
         <activity
-            android:name=".authModule.uis.SignInActivity"
+            android:name=".arthYuga.authModule.uis.SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

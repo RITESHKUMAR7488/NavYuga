@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import com.example.navyuga.arthYuga.common.models.PropertyModel
 import com.example.navyuga.databinding.ActivityPropertyDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
-import com.example.navyuga.mainModule.adapters.PropertyImageAdapter
+import com.example.navyuga.arthYuga.mainModule.adapters.PropertyImageAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import java.net.URLEncoder
 

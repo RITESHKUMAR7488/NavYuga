@@ -6,11 +6,12 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.example.estake.databinding.ActivityRegisterBinding
+
 import com.example.navyuga.MainActivity
 import com.example.navyuga.arthYuga.authModule.viewModels.AuthViewModel
 import com.example.navyuga.arthYuga.common.utilities.PreferenceManager
 import com.example.navyuga.arthYuga.common.utilities.UiState
+import com.example.navyuga.databinding.ActivityRegisterBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject

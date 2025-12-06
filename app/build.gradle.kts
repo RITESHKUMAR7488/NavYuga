@@ -12,7 +12,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.estake"
+        applicationId = "com.example.navyuga"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

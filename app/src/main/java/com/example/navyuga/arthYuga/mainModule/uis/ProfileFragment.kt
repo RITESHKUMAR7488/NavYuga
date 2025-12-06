@@ -17,9 +17,9 @@ import com.example.navyuga.R
 import com.example.navyuga.arthYuga.common.utilities.PreferenceManager
 import com.example.navyuga.arthYuga.common.utilities.UiState
 import com.example.navyuga.databinding.FragmentProfileBinding
-import com.example.navyuga.mainModule.adapters.PortfolioStatsAdapter
-import com.example.navyuga.mainModule.adapters.UploadsAdapter
-import com.example.navyuga.mainModule.viewModels.ProfileViewModel
+import com.example.navyuga.arthYuga.mainModule.adapters.PortfolioStatsAdapter
+import com.example.navyuga.arthYuga.mainModule.adapters.UploadsAdapter
+import com.example.navyuga.arthYuga.mainModule.viewModels.ProfileViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject

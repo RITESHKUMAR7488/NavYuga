@@ -16,8 +16,8 @@ class AuthViewModel @Inject constructor(
     private val repository: AuthRepository
 ) : ViewModel() {
 
-    private val _loginState = MutableStateFlow<UiState<String>>(UiState.Idle)
-    val loginState: StateFlow<UiState<String>> = _loginState
+    private val _loginState = MutableStateFlow<UiState<UserModel>>(UiState.Idle)
+    val loginState: StateFlow<UiState<UserModel>> = _loginState
 
     private val _registerState = MutableStateFlow<UiState<String>>(UiState.Idle)
     val registerState: StateFlow<UiState<String>> = _registerState
@@ -25,8 +25,8 @@ class AuthViewModel @Inject constructor(
     fun login(email: String, pass: String) {
         viewModelScope.launch {
             _loginState.value = UiState.Loading
-            val result = repository.loginUser(email, pass)
-            _loginState.value = result
+            // Repo now returns UiState<UserModel>
+            _loginState.value = repository.loginUser(email, pass)
         }
     }
 

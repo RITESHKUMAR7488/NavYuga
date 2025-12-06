@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.navyuga.arthYuga.authModule.uis.SignInActivity
 import com.example.navyuga.arthYuga.common.utilities.PreferenceManager
 import com.example.navyuga.databinding.ActivityMainBinding
-import com.example.navyuga.mainModule.uis.*
+import com.example.navyuga.arthYuga.mainModule.uis.*
 import com.example.navyuga.arthYuga.searchModule.uis.SearchFragment
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject

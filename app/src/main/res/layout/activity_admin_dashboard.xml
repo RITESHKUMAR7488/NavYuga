@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="@color/bg_screen">
+
+    <TextView
+        android:text="Navyuga Admin"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddProperty"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="List New Property"
+        android:background="@drawable/bg_input_field"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddInvestment"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Register Investment"
+        android:background="@drawable/bg_input_field"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddUser"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Create New User / Admin"
+        android:background="@drawable/bg_gradient_button"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Logout"
+        android:background="@drawable/bg_input_field"
+        android:textColor="#FF3B30"
+        android:textStyle="bold"/>
+
+</LinearLayout>

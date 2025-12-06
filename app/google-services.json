@@ -9,7 +9,26 @@
       "client_info": {
         "mobilesdk_app_id": "1:997083384712:android:b476805b4375250029483d",
         "android_client_info": {
-          "package_name": "com.example.estake"
+          "package_name": "com.example.navyuga"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsY0c3jTSFLFd0f51lGfYgKxQjlt_AybM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997083384712:android:12ef2444d52dae5a29483d",
+        "android_client_info": {
+          "package_name": "com.example.navyuga"
         }
       },
       "oauth_client": [],
